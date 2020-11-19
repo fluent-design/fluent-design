@@ -27,7 +27,7 @@ const Banner = (props: { location: any }) => {
 
           <div className="home-banner-content-operations">
             <Link to={getLocalizedPathname('/components/overview/', isZhCN, location.query)}>
-              <Button type="primary" shape="round">
+              <Button type="primary" shape="round" style={{ backgroundColor: '#0078d4' }}>
                 <FormattedMessage id="app.home.getting-started" />
               </Button>
             </Link>
