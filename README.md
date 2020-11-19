@@ -1,6 +1,6 @@
 <h1 align="center">Fluent Design</h1>
 
-基于 antd@4.8.2 定制开发的 Fluent UI 风格的组件库。
+基于 [antd@4.8.2](https://github.com/ant-design/ant-design/tree/4.8.2) 定制开发的 Fluent UI 风格的组件库。
 
 ## ⌨️ 本地开发
 
