@@ -6,7 +6,7 @@
 
 你可以使用 Gitpod 进行在线开发：
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ant-design/ant-design)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/fluent-design/fluent-design)
 
 或者克隆到本地开发:
 
