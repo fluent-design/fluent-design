@@ -130,8 +130,11 @@
 @ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 
 // Border color
-@border-color-base: hsv(0, 0, 85%); // base border outline a component
-@border-color-split: hsv(0, 0, 94%); // split border inside a component
+
+// 取自 https://developer.microsoft.com/en-us/fluentui/#/controls/web/button Standard 类型按钮边框
+@border-color-base: #8a8886; // base border outline a component
+// https://developer.microsoft.com/en-us/fluentui/#/controls/web/list 列表项间的边框颜色
+@border-color-split: #edebe9; // split border inside a component
 @border-color-inverse: @white;
 @border-width-base: 1px; // width of the border for a component
 @border-style-base: solid; // style of a components border
