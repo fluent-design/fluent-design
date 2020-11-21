@@ -11,7 +11,7 @@
 或者克隆到本地开发:
 
 ```bash
-$ git clone git@github.com:ant-design/ant-design.git
+$ git clone git@github.com:fluent-design/fluent-design.git
 $ cd ant-design
 $ npm install
 $ npm start
