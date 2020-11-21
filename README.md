@@ -12,7 +12,7 @@
 
 ```bash
 $ git clone git@github.com:fluent-design/fluent-design.git
-$ cd ant-design
+$ cd fluent-design
 $ npm install
 $ npm start
 ```
