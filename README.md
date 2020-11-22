@@ -23,5 +23,5 @@ $ npm start
 
 - [主要颜色](https://github.com/fluent-design/fluent-design/commit/494c0cafabb4358f3887c124b825378c843b402e)
 - [默认字体](https://github.com/fluent-design/fluent-design/commit/67c6e5357d783752be87db2b5308901626d371cb)
-- [按钮默认自重](https://github.com/fluent-design/fluent-design/commit/e3bb0bb5e150c16a3edd4f99f416bfd9795ddb6d)
+- [按钮默认字重](https://github.com/fluent-design/fluent-design/commit/e3bb0bb5e150c16a3edd4f99f416bfd9795ddb6d)
 - [主要边框颜色](https://github.com/fluent-design/fluent-design/commit/a5b9cdf0f6ec16b918917df22c08bb0a5fe4ef8d)
