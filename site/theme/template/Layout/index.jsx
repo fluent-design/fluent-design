@@ -241,7 +241,7 @@ export default class Layout extends React.Component {
             <meta property="og:type" content="website" />
             <meta
               property="og:image"
-              content="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"
+              content="https://avatars0.githubusercontent.com/u/74195481?s=200&v=4"
             />
           </Helmet>
           <IntlProvider

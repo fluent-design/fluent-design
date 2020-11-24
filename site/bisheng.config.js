@@ -123,4 +123,5 @@ module.exports = {
     isDev,
     usePreact,
   },
+  root: '/fluent-design/',
 };

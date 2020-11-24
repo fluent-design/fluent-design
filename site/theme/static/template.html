@@ -8,7 +8,7 @@
     {% if meta %}{{ meta | safe }}{% endif %}
     <link
       rel="icon"
-      href="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"
+      href="https://avatars0.githubusercontent.com/u/74195481?s=200&v=4"
       type="image/x-icon"
     />
     {% for cssFile in manifest["css"] %}
@@ -83,19 +83,6 @@
     {% for jsFile in manifest["js"] %}
     <script src="{{ root }}{{ jsFile }}"></script>
     {% endfor %}
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72788897-1"></script>
-    <script>
-      if (!location.port) {
-        // Enable Google Analytics
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-72788897-1');
-      }
-    </script>
     <!-- Hotjar Tracking Code for ant.design -->
     <script>
       (function (h, o, t, j, a, r) {
