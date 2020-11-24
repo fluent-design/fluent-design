@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh" data-direction="ltr" class="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluent Design - 一套基于 antd 的 Fluent UI 风格的 React 组件库</title>
+    <meta data-rh="true" property="og:title" content="Fluent Design - 一套基于 antd 的 Fluent UI 风格的 React 组件库"/><meta data-rh="true" property="og:type" content="website"/><meta data-rh="true" property="og:image" content="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"/>
+    <link
+      rel="icon"
+      href="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"
+      type="image/x-icon"
+    />
+    
+    <link rel="stylesheet" type="text/css" href="/index-8c4d965f.css" />
+    
+    <style id="nprogress-style">
+      #nprogress {
+        display: none;
+      }
+    </style>
+    <link rel="stylesheet/less" type="text/css" href="/color.less" />
+    <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,Intl"></script>
+    <script>
+      (function () {
+        function isLocalStorageNameSupported() {
+          var testKey = 'test';
+          var storage = window.localStorage;
+          try {
+            storage.setItem(testKey, '1');
+            storage.removeItem(testKey);
+            return true;
+          } catch (error) {
+            return false;
+          }
+        }
+        // 优先级提高到所有静态资源的前面，语言不对，加载其他静态资源没意义
+        var pathname = location.pathname;
+
+        function isZhCN(pathname) {
+          return /-cn\/?$/.test(pathname);
+        }
+        function getLocalizedPathname(path, zhCN) {
+          var pathname = path.startsWith('/') ? path : '/' + path;
+          if (!zhCN) {
+            // to enUS
+            return /\/?index-cn/.test(pathname) ? '/' : pathname.replace('-cn', '');
+          } else if (pathname === '/') {
+            return '/index-cn';
+          } else if (pathname.endsWith('/')) {
+            return pathname.replace(/\/$/, '-cn/');
+          }
+          return pathname + '-cn';
+        }
+
+        // 兼容旧的 URL， `?locale=...`
+        var queryString = location.search;
+        if (queryString) {
+          var isZhCNConfig = queryString.indexOf('zh-CN') > -1;
+          if (isZhCNConfig && !isZhCN(pathname)) {
+            location.pathname = getLocalizedPathname(pathname, isZhCNConfig);
+          }
+        }
+
+        // 首页无视链接里面的语言设置 https://github.com/ant-design/ant-design/issues/4552
+        if (isLocalStorageNameSupported() && (pathname === '/' || pathname === '/index-cn')) {
+          var lang =
+            (window.localStorage && localStorage.getItem('locale')) ||
+            ((navigator.language || navigator.browserLanguage).toLowerCase() === 'zh-cn'
+              ? 'zh-CN'
+              : 'en-US');
+          // safari is 'zh-cn', while other browser is 'zh-CN';
+          if ((lang === 'zh-CN') !== isZhCN(pathname)) {
+            location.pathname = getLocalizedPathname(pathname, lang === 'zh-CN');
+          }
+        }
+        document.documentElement.className += isZhCN(pathname) ? 'zh-cn' : 'en-us';
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="react-content"><header id="header" class="clearfix home-header"><div class="ant-row" style="flex-flow:nowrap;height:64px"><div style="flex:none" class="ant-col"><h1><a id="logo" href="/index-cn"><img alt="logo" src="https://avatars0.githubusercontent.com/u/74195481?s=200&amp;v=4"/>Fluent Design</a></h1></div><div style="flex:auto" class="ant-col menu-row"><div id="search-box" class=""><span role="img" aria-label="search" class="anticon anticon-search"><svg viewBox="64 64 896 896" focusable="false" data-icon="search" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path></svg></span><input type="text" placeholder="在 fluent.design 中搜索" class="ant-input" value=""/></div><ul class="ant-menu ant-menu-light menu-site ant-menu-root ant-menu-horizontal" id="nav" direction="ltr" role="menu"><li class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none" role="menuitem"><div class="ant-menu-submenu-title" role="button" aria-expanded="false" aria-haspopup="true"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li class="ant-menu-item ant-menu-item-only-child" role="menuitem"><a href="/components/overview-cn/">组件</a></li><li class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="visibility:hidden;position:absolute" role="menuitem"><div class="ant-menu-submenu-title" role="button" aria-expanded="false" aria-haspopup="true"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li></ul><span id="github-btn" class="github-btn"><a class="gh-btn" href="//github.com/fluent-design/fluent-design/" target="_blank"><span class="gh-ico" aria-hidden="true"></span><span class="gh-text">Star</span></a><a class="gh-count" target="_blank" href="//github.com/fluent-design/fluent-design/stargazers/"></a></span></div></div></header><div class="home-container"><style>
+    .rc-footer-container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .rc-footer-columns {
+      max-width: 1208px;
+      margin: 0 auto;
+    }
+  </style><div class="home-banner"><div class="home-banner-background"><img alt="background" src="https://gw.alipayobjects.com/mdn/rms_08e378/afts/img/A*kJM2Q6uPXCAAAAAAAAAAAABkARQnAQ"/><svg viewBox="0 0 1440 448"><g transform="translate(380, 30)" opacity="1" frame="0"><g transform="matrix(1, 0, 0, 1, 0, 0)"><g transform="rotate(0, 170, 170)"><svg><defs><filter id="banner-circle-shadow-1"><feDropShadow dx="10" dy="10" stdDeviation="10" flood-color="rgba(0,0,0,0.05)"></feDropShadow></filter><linearGradient id="banner-circle-fill-1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#FAFCFE"></stop><stop offset="100%" style="stop-color:#F9FCFE"></stop></linearGradient></defs><circle cx="170" cy="170" r="140" fill="url(#banner-circle-fill-1)" filter="url(#banner-circle-shadow-1)"></circle></svg></g></g></g><g transform="translate(-230, 218)" opacity="1" frame="0"><g transform="matrix(1, 0, 0, 1, 0, 0)"><g transform="rotate(0, 230, 230)"><svg><defs><filter id="banner-circle-shadow-2"><feDropShadow dx="10" dy="10" stdDeviation="10" flood-color="rgba(0,0,0,0.05)"></feDropShadow></filter><linearGradient id="banner-circle-fill-2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#FAFCFE"></stop><stop offset="50%" style="stop-color:#F3F9FC"></stop></linearGradient></defs><circle cx="230" cy="230" r="200" fill="url(#banner-circle-fill-2)" filter="url(#banner-circle-shadow-2)"></circle></svg></g></g></g><g transform="translate(1280, 180)" opacity="1" frame="0"><g transform="matrix(1, 0, 0, 1, 0, 0)"><g transform="rotate(0, 120, 120)"><svg><defs><filter id="banner-rect-shadow-1"><feDropShadow dx="10" dy="10" stdDeviation="10" flood-color="rgba(0,0,0,0.05)"></feDropShadow></filter><linearGradient id="banner-rect-fill-1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="25%" style="stop-color:#F8FCFF"></stop><stop offset="100%" style="stop-color:#F8FBFF"></stop></linearGradient></defs><rect x="30" y="30" width="180" height="180" fill="url(#banner-rect-fill-1)" filter="url(#banner-rect-shadow-1)"></rect></svg></g></g></g><g transform="translate(670, -660)" opacity="1" frame="0"><g transform="matrix(1, 0, 0, 1, 0, 0)"><g transform="rotate(0, 430, 430)"><svg width="860" height="860"><defs><filter id="banner-diamond-shadow-1"><feDropShadow dx="10" dy="10" stdDeviation="10" flood-color="rgba(0,0,0,0.05)"></feDropShadow></filter><linearGradient id="banner-diamond-fill-1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="60%" style="stop-color:#FCFDFF"></stop><stop offset="100%" style="stop-color:#FCFDFE"></stop></linearGradient></defs><path d="M 30 430 430 30 830 430 430 830 Z" fill="url(#banner-diamond-fill-1)" filter="url(#banner-diamond-shadow-1)"></path></svg></g></g></g></svg></div><div class="home-banner-holder"><div class="home-banner-content"><h1>Fluent Design</h1><a class="banner-video"><span role="img" aria-label="play-circle" class="anticon anticon-play-circle"><svg viewBox="64 64 896 896" focusable="false" data-icon="play-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm144.1 454.9L437.7 677.8a8.02 8.02 0 01-12.7-6.5V353.7a8 8 0 0112.7-6.5L656.1 506a7.9 7.9 0 010 12.9z"></path></svg></span> <!-- -->播放视频</a><div class="home-banner-content-operations"><a href="/components/overview-cn/"><button style="background-color:#0078d4" type="button" class="ant-btn ant-btn-primary ant-btn-round">开始使用</button></a></div></div></div></div><footer class="rc-footer rc-footer-dark"><section class="rc-footer-container"></section><section class="rc-footer-bottom"><div class="rc-footer-bottom-container">Made with <span style="color:#fff">❤</span> by<!-- --> <a target="_blank" rel="noopener noreferrer" href="https://github.com/zpr1g">zpr1g</a></div></section></footer></div></div>
+    
+    <script src="/index-9a45e724.js"></script>
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72788897-1"></script>
+    <script>
+      if (!location.port) {
+        // Enable Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-72788897-1');
+      }
+    </script>
+    <!-- Hotjar Tracking Code for ant.design -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        if (location.hostname === 'localhost') {
+          return;
+        }
+
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 473408, hjsv: 5 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+  </body>
+</html>
