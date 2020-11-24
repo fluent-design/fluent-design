@@ -23,25 +23,16 @@ export interface NavigationProps extends SharedProps {
 
 export default ({
   isZhCN,
-  isRTL,
   isMobile,
   pathname,
   responsive,
   location,
-  directionText,
   showTechUIButton,
-  onLangChange,
-  onDirectionChange,
 }: NavigationProps) => {
   const menuMode = isMobile ? 'inline' : 'horizontal';
 
   const module = pathname.split('/').slice(0, -1).join('/');
   let activeMenuItem = module || 'home';
-  if (location.pathname === 'changelog' || location.pathname === 'changelog-cn') {
-    activeMenuItem = 'docs/react';
-  } else if (location.pathname === 'docs/resources' || location.pathname === 'docs/resources-cn') {
-    activeMenuItem = 'docs/resources';
-  }
 
   let additional: React.ReactNode = null;
   const additionalItems = [
@@ -53,12 +44,6 @@ export default ({
       >
         Github
       </a>
-    </Menu.Item>,
-    <Menu.Item key="switch-lang" onClick={onLangChange}>
-      <FormattedMessage id="app.header.lang" />
-    </Menu.Item>,
-    <Menu.Item key="switch-direction" onClick={onDirectionChange}>
-      {directionText}
     </Menu.Item>,
   ];
 
