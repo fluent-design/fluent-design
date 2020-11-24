@@ -1,14 +1,14 @@
 import React from 'react';
-import { FormattedMessage, injectIntl } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import { UnorderedListOutlined } from '@ant-design/icons';
-import { Row, Col, Popover, Button } from 'antd';
+import { Row, Col, Popover } from 'antd';
 
 import * as utils from '../../utils';
 import Logo from './Logo';
 import SearchBox from './SearchBox';
 import Navigation from './Navigation';
-// import Github from './Github';
+import Github from './Github';
 import SiteContext from '../SiteContext';
 import { ping } from '../../utils';
 
@@ -243,23 +243,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
 
           let menu: (React.ReactElement | null)[] = [
             navigationNode,
-            <Button
-              size="small"
-              onClick={this.onLangChange}
-              className="header-button header-lang-button"
-              key="lang-button"
-            >
-              <FormattedMessage id="app.header.lang" />
-            </Button>,
-            <Button
-              size="small"
-              onClick={this.onDirectionChange}
-              className="header-button header-direction-button"
-              key="direction-button"
-            >
-              {this.getNextDirectionText()}
-            </Button>,
-            // <Github key="github" responsive={responsive} />,
+            <Github key="github" responsive={responsive} />,
           ];
 
           if (windowWidth < RESPONSIVE_XS) {
