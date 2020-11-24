@@ -34,7 +34,6 @@ module.exports = {
   source: {
     components: './components',
     changelog: ['CHANGELOG.md'],
-    'components/form/v3': ['components/form/v3.zh-CN.md', 'components/form/v3.en-US.md'],
   },
   theme: './site/theme',
   htmlTemplate: './site/theme/static/template.html',
