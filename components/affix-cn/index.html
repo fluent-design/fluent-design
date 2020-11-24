@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>固钉 Affix - Ant Design</title>
-    <meta data-rh="true" property="og:type" content="website"/><meta data-rh="true" property="og:image" content="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"/><meta data-rh="true" property="og:title" content="固钉 Affix - Ant Design"/><meta data-rh="true" name="description" content="将页面元素钉在可视范围。"/>
+    <meta data-rh="true" property="og:type" content="website"/><meta data-rh="true" property="og:image" content="https://avatars0.githubusercontent.com/u/74195481?s=200&v=4"/><meta data-rh="true" property="og:title" content="固钉 Affix - Ant Design"/><meta data-rh="true" name="description" content="将页面元素钉在可视范围。"/>
     <link
       rel="icon"
-      href="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"
+      href="https://avatars0.githubusercontent.com/u/74195481?s=200&v=4"
       type="image/x-icon"
     />
     
-    <link rel="stylesheet" type="text/css" href="/index-8c4d965f.css" />
+    <link rel="stylesheet" type="text/css" href="/fluent-design/index-8c4d965f.css" />
     
     <style id="nprogress-style">
       #nprogress {
         display: none;
       }
     </style>
-    <link rel="stylesheet/less" type="text/css" href="/color.less" />
+    <link rel="stylesheet/less" type="text/css" href="/fluent-design/color.less" />
     <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,Intl"></script>
     <script>
       (function () {
@@ -138,21 +138,8 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   mountNode<span class="token punctuation">,</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><div role="tabpanel" tabindex="-1" aria-hidden="true" style="display:none" class="ant-tabs-tabpane"></div></div></div></div></div></section></section></div></div><section class="markdown api-container"><h2 id="API"><span>API</span><a href="#API" class="anchor">#</a></h2><table><thead><tr><th>成员</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td>offsetBottom</td><td>距离窗口底部达到指定偏移量后触发</td><td>number</td><td>-</td></tr><tr><td>offsetTop</td><td>距离窗口顶部达到指定偏移量后触发</td><td>number</td><td>-</td></tr><tr><td>target</td><td>设置 <code>Affix</code> 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数</td><td>() =&gt; HTMLElement</td><td>() =&gt; window</td></tr><tr><td>onChange</td><td>固定状态改变时触发的回调函数</td><td>function(affixed)</td><td>-</td></tr></tbody></table><p><strong>注意：</strong><code>Affix</code> 内的元素不要使用绝对定位，如需要绝对定位的效果，可以直接设置 <code>Affix</code> 为绝对定位：</p><pre class="language-jsx"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Affix</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> position<span class="token punctuation">:</span> <span class="token string">'absolute'</span><span class="token punctuation">,</span> top<span class="token punctuation">:</span> y<span class="token punctuation">,</span> left<span class="token punctuation">:</span> x <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token operator">...</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Affix</span><span class="token punctuation">></span></span></code></pre><h2 id="FAQ"><span>FAQ</span><a href="#FAQ" class="anchor">#</a></h2><h3 id="Affix-使用-target-绑定容器时，元素会跑到容器外。"><span>Affix 使用 <code>target</code> 绑定容器时，元素会跑到容器外。</span><a href="#Affix-使用-target-绑定容器时，元素会跑到容器外。" class="anchor">#</a></h3><p>从性能角度考虑，我们只监听容器滚动事件。如果希望任意滚动，你可以在窗体添加滚动监听：<a href="https://codesandbox.io/s/2xyj5zr85p">https://codesandbox.io/s/2xyj5zr85p</a></p><p>相关 issue：<a href="https://github.com/ant-design/ant-design/issues/3938">#3938</a> <a href="https://github.com/ant-design/ant-design/issues/5642">#5642</a> <a href="https://github.com/ant-design/ant-design/issues/16120">#16120</a></p></section></article><div class="contributors-list" style="display:flex;list-style:none;margin:0;padding:0"><span style="opacity:0.3" class="ant-avatar ant-avatar-circle"><span class="ant-avatar-string" style="opacity:0"></span></span></div></section><div class="fixed-widgets"><span style="width:44px;height:44px;line-height:44px;font-size:22px" class="ant-avatar ant-avatar-circle ant-avatar-icon ant-dropdown-trigger fixed-widgets-avatar"><span role="img" class="anticon"><svg width="21" height="21" viewBox="0 0 21 21" fill="currentColor"><g fill-rule="evenodd"><g fill-rule="nonzero"><path d="M7.02 3.635l12.518 12.518a1.863 1.863 0 010 2.635l-1.317 1.318a1.863 1.863 0 01-2.635 0L3.068 7.588A2.795 2.795 0 117.02 3.635zm2.09 14.428a.932.932 0 110 1.864.932.932 0 010-1.864zm-.043-9.747L7.75 9.635l9.154 9.153 1.318-1.317-9.154-9.155zM3.52 12.473c.514 0 .931.417.931.931v.932h.932a.932.932 0 110 1.864h-.932v.931a.932.932 0 01-1.863 0l-.001-.931h-.93a.932.932 0 010-1.864h.93v-.932c0-.514.418-.931.933-.931zm15.374-3.727a1.398 1.398 0 110 2.795 1.398 1.398 0 010-2.795zM4.385 4.953a.932.932 0 000 1.317l2.046 2.047L7.75 7 5.703 4.953a.932.932 0 00-1.318 0zM14.701.36a.932.932 0 01.931.932v.931h.932a.932.932 0 010 1.864h-.933l.001.932a.932.932 0 11-1.863 0l-.001-.932h-.93a.932.932 0 110-1.864h.93v-.931a.932.932 0 01.933-.932z"></path></g></g></svg></span></span></div><section class="prev-next-nav"><a class="prev-page" href="/components/space-cn/"><span role="img" aria-label="left" class="anticon anticon-left footer-nav-icon-before"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></span><span>Space</span><span class="chinese">间距</span><span role="img" aria-label="right" class="anticon anticon-right footer-nav-icon-after"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></a><a class="next-page" href="/components/breadcrumb-cn/"><span role="img" aria-label="left" class="anticon anticon-left footer-nav-icon-before"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></span><span>Breadcrumb</span><span class="chinese">面包屑</span><span role="img" aria-label="right" class="anticon anticon-right footer-nav-icon-after"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></a></section><footer class="rc-footer rc-footer-dark"><section class="rc-footer-container"></section><section class="rc-footer-bottom"><div class="rc-footer-bottom-container">Made with <span style="color:#fff">❤</span> by<!-- --> <a target="_blank" rel="noopener noreferrer" href="https://github.com/zpr1g">zpr1g</a></div></section></footer></div></div></div></div>
     
-    <script src="/index-9a45e724.js"></script>
+    <script src="/fluent-design/index-a376b686.js"></script>
     
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72788897-1"></script>
-    <script>
-      if (!location.port) {
-        // Enable Google Analytics
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-72788897-1');
-      }
-    </script>
     <!-- Hotjar Tracking Code for ant.design -->
     <script>
       (function (h, o, t, j, a, r) {

@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>标签页 Tabs - Ant Design</title>
-    <meta data-rh="true" property="og:type" content="website"/><meta data-rh="true" property="og:image" content="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"/><meta data-rh="true" property="og:title" content="标签页 Tabs - Ant Design"/><meta data-rh="true" name="description" content="选项卡切换组件。"/>
+    <meta data-rh="true" property="og:type" content="website"/><meta data-rh="true" property="og:image" content="https://avatars0.githubusercontent.com/u/74195481?s=200&v=4"/><meta data-rh="true" property="og:title" content="标签页 Tabs - Ant Design"/><meta data-rh="true" name="description" content="选项卡切换组件。"/>
     <link
       rel="icon"
-      href="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"
+      href="https://avatars0.githubusercontent.com/u/74195481?s=200&v=4"
       type="image/x-icon"
     />
     
-    <link rel="stylesheet" type="text/css" href="/index-8c4d965f.css" />
+    <link rel="stylesheet" type="text/css" href="/fluent-design/index-8c4d965f.css" />
     
     <style id="nprogress-style">
       #nprogress {
         display: none;
       }
     </style>
-    <link rel="stylesheet/less" type="text/css" href="/color.less" />
+    <link rel="stylesheet/less" type="text/css" href="/fluent-design/color.less" />
     <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,Intl"></script>
     <script>
       (function () {
@@ -849,21 +849,8 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   mountNode<span class="token punctuation">,</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></section></section></div></div><section class="markdown api-container"><h2 id="API"><span>API</span><a href="#API" class="anchor">#</a></h2><h3 id="Tabs"><span>Tabs</span><a href="#Tabs" class="anchor">#</a></h3><table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th><th>版本</th></tr></thead><tbody><tr><td>activeKey</td><td>当前激活 tab 面板的 key</td><td>string</td><td>-</td><td></td></tr><tr><td>addIcon</td><td>自定义添加按钮</td><td>ReactNode</td><td>-</td><td>4.4.0</td></tr><tr><td>animated</td><td>是否使用动画切换 Tabs, 仅生效于 <code>tabPosition=&quot;top&quot;</code></td><td>boolean <!-- -->|<!-- --> { inkBar: boolean, tabPane: boolean }</td><td>{ inkBar: true, tabPane: false }</td><td></td></tr><tr><td>centered</td><td>标签居中展示</td><td>boolean</td><td>false</td><td>4.4.0</td></tr><tr><td>defaultActiveKey</td><td>初始化选中面板的 key，如果没有设置 activeKey</td><td>string</td><td><code>第一个面板</code></td><td></td></tr><tr><td>hideAdd</td><td>是否隐藏加号图标，在 <code>type=&quot;editable-card&quot;</code> 时有效</td><td>boolean</td><td>false</td><td></td></tr><tr><td>keyboard</td><td>开启键盘切换功能</td><td>boolean</td><td>true</td><td></td></tr><tr><td>renderTabBar</td><td>替换 TabBar，用于二次封装标签头</td><td>(props: DefaultTabBarProps, DefaultTabBar: React.ComponentClass) =&gt; React.ReactElement</td><td>-</td><td></td></tr><tr><td>size</td><td>大小，提供 <code>large</code> <code>default</code> 和 <code>small</code> 三种大小</td><td>string</td><td><code>default</code></td><td></td></tr><tr><td>tabBarExtraContent</td><td>tab bar 上额外的元素</td><td>ReactNode <!-- -->|<!-- --> {left?: ReactNode, right?: ReactNode}</td><td>-</td><td>object: 4.6.0</td></tr><tr><td>tabBarGutter</td><td>tabs 之间的间隙</td><td>number</td><td>-</td><td></td></tr><tr><td>tabBarStyle</td><td>tab bar 的样式对象</td><td>object</td><td>-</td><td></td></tr><tr><td>tabPosition</td><td>页签位置，可选值有 <code>top</code> <code>right</code> <code>bottom</code> <code>left</code></td><td>string</td><td><code>top</code></td><td></td></tr><tr><td>type</td><td>页签的基本样式，可选 <code>line</code>、<code>card</code> <code>editable-card</code> 类型</td><td>string</td><td><code>line</code></td><td></td></tr><tr><td>onChange</td><td>切换面板的回调</td><td>function(activeKey) {}</td><td>-</td><td></td></tr><tr><td>onEdit</td><td>新增和删除页签的回调，在 <code>type=&quot;editable-card&quot;</code> 时有效</td><td>(targetKey, action): void</td><td>-</td><td></td></tr><tr><td>onTabClick</td><td>tab 被点击的回调</td><td>function(key: string, event: MouseEvent)</td><td>-</td><td></td></tr><tr><td>onTabScroll</td><td>tab 滚动时触发</td><td>function({ direction: <code>left</code> <!-- -->|<!-- --> <code>right</code> <!-- -->|<!-- --> <code>top</code> <!-- -->|<!-- --> <code>bottom</code> })</td><td>-</td><td>4.3.0</td></tr></tbody></table><h3 id="Tabs.TabPane"><span>Tabs.TabPane</span><a href="#Tabs.TabPane" class="anchor">#</a></h3><table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td>closeIcon</td><td>自定义关闭图标，<code>在 type=&quot;editable-card&quot;</code>时有效</td><td>ReactNode</td><td>-</td></tr><tr><td>forceRender</td><td>被隐藏时是否渲染 DOM 结构</td><td>boolean</td><td>false</td></tr><tr><td>key</td><td>对应 activeKey</td><td>string</td><td>-</td></tr><tr><td>tab</td><td>选项卡头显示文字</td><td>ReactNode</td><td>-</td></tr></tbody></table></section></article><div class="contributors-list" style="display:flex;list-style:none;margin:0;padding:0"><span style="opacity:0.3" class="ant-avatar ant-avatar-circle"><span class="ant-avatar-string" style="opacity:0"></span></span></div></section><div class="fixed-widgets"><span style="width:44px;height:44px;line-height:44px;font-size:22px" class="ant-avatar ant-avatar-circle ant-avatar-icon ant-dropdown-trigger fixed-widgets-avatar"><span role="img" class="anticon"><svg width="21" height="21" viewBox="0 0 21 21" fill="currentColor"><g fill-rule="evenodd"><g fill-rule="nonzero"><path d="M7.02 3.635l12.518 12.518a1.863 1.863 0 010 2.635l-1.317 1.318a1.863 1.863 0 01-2.635 0L3.068 7.588A2.795 2.795 0 117.02 3.635zm2.09 14.428a.932.932 0 110 1.864.932.932 0 010-1.864zm-.043-9.747L7.75 9.635l9.154 9.153 1.318-1.317-9.154-9.155zM3.52 12.473c.514 0 .931.417.931.931v.932h.932a.932.932 0 110 1.864h-.932v.931a.932.932 0 01-1.863 0l-.001-.931h-.93a.932.932 0 010-1.864h.93v-.932c0-.514.418-.931.933-.931zm15.374-3.727a1.398 1.398 0 110 2.795 1.398 1.398 0 010-2.795zM4.385 4.953a.932.932 0 000 1.317l2.046 2.047L7.75 7 5.703 4.953a.932.932 0 00-1.318 0zM14.701.36a.932.932 0 01.931.932v.931h.932a.932.932 0 010 1.864h-.933l.001.932a.932.932 0 11-1.863 0l-.001-.932h-.93a.932.932 0 110-1.864h.93v-.931a.932.932 0 01.933-.932z"></path></g></g></svg></span></span></div><section class="prev-next-nav"><a class="prev-page" href="/components/table-cn/"><span role="img" aria-label="left" class="anticon anticon-left footer-nav-icon-before"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></span><span>Table</span><span class="chinese">表格</span><span role="img" aria-label="right" class="anticon anticon-right footer-nav-icon-after"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></a><a class="next-page" href="/components/tag-cn/"><span role="img" aria-label="left" class="anticon anticon-left footer-nav-icon-before"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></span><span>Tag</span><span class="chinese">标签</span><span role="img" aria-label="right" class="anticon anticon-right footer-nav-icon-after"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></a></section><footer class="rc-footer rc-footer-dark"><section class="rc-footer-container"></section><section class="rc-footer-bottom"><div class="rc-footer-bottom-container">Made with <span style="color:#fff">❤</span> by<!-- --> <a target="_blank" rel="noopener noreferrer" href="https://github.com/zpr1g">zpr1g</a></div></section></footer></div></div></div></div>
     
-    <script src="/index-9a45e724.js"></script>
+    <script src="/fluent-design/index-a376b686.js"></script>
     
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72788897-1"></script>
-    <script>
-      if (!location.port) {
-        // Enable Google Analytics
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-72788897-1');
-      }
-    </script>
     <!-- Hotjar Tracking Code for ant.design -->
     <script>
       (function (h, o, t, j, a, r) {
