@@ -40,7 +40,7 @@
     }
     & when not (@theme = dark) {
       .button-color(
-        @color; ~`colorPalette('@{background}', 5) `; ~`colorPalette('@{background}', 5) `
+        @color; ~`colorPalette('@{background}', 7) `; ~`colorPalette('@{background}', 7) `
       );
     }
   }
@@ -48,7 +48,7 @@
   &:active {
     & when (@theme = dark) {
       .button-color(
-        @color; ~`colorPalette('@{background}', 5) `; ~`colorPalette('@{background}', 5) `
+        @color; ~`colorPalette('@{background}', 7) `; ~`colorPalette('@{background}', 7) `
       );
     }
     & when not (@theme = dark) {
@@ -69,23 +69,23 @@
     & when (@theme = dark) {
       .button-color(@primary-5; @background; @primary-5);
     }
-    & when not (@theme = dark) {
-      .button-color(
-        ~`colorPalette('@{btn-primary-bg}', 5) `; @background;
-          ~`colorPalette('@{btn-primary-bg}', 5) `
-      );
-    }
+    // & when not (@theme = dark) {
+    //   .button-color(
+    //     ~`colorPalette('@{btn-primary-bg}', 5) `; @background;
+    //       ~`colorPalette('@{btn-primary-bg}', 5) `
+    //   );
+    // }
   }
   &:active {
     & when (@theme = dark) {
       .button-color(@primary-7; @background; @primary-7);
     }
-    & when not (@theme = dark) {
-      .button-color(
-        ~`colorPalette('@{btn-primary-bg}', 7) `; @background;
-          ~`colorPalette('@{btn-primary-bg}', 7) `
-      );
-    }
+    // & when not (@theme = dark) {
+    //   .button-color(
+    //     ~`colorPalette('@{btn-primary-bg}', 7) `; @background;
+    //       ~`colorPalette('@{btn-primary-bg}', 7) `
+    //   );
+    // }
   }
   .button-disabled();
 }
@@ -259,7 +259,7 @@
   &:focus,
   &:active {
     text-decoration: none;
-    background: @btn-default-bg;
+    background: @item-hover-bg;
   }
 }
 // ghost button style
