@@ -28,6 +28,7 @@ export default ({
   responsive,
   location,
   showTechUIButton,
+  onLangChange,
 }: NavigationProps) => {
   const menuMode = isMobile ? 'inline' : 'horizontal';
 
@@ -44,6 +45,9 @@ export default ({
       >
         Github
       </a>
+    </Menu.Item>,
+    <Menu.Item key="switch-lang" onClick={onLangChange}>
+      <FormattedMessage id="app.header.lang" />
     </Menu.Item>,
   ];
 

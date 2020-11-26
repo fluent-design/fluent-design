@@ -1,8 +1,8 @@
 import React from 'react';
-import { injectIntl } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import { UnorderedListOutlined } from '@ant-design/icons';
-import { Row, Col, Popover } from 'antd';
+import { Row, Col, Popover, Button } from 'antd';
 
 import * as utils from '../../utils';
 import Logo from './Logo';
@@ -244,6 +244,14 @@ class Header extends React.Component<HeaderProps, HeaderState> {
           let menu: (React.ReactElement | null)[] = [
             navigationNode,
             <Github key="github" responsive={responsive} />,
+            <Button
+              size="small"
+              onClick={this.onLangChange}
+              className="header-button header-lang-button"
+              key="lang-button"
+            >
+              <FormattedMessage id="app.header.lang" />
+            </Button>,
           ];
 
           if (windowWidth < RESPONSIVE_XS) {
