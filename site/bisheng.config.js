@@ -5,6 +5,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const EsbuildPlugin = require('esbuild-webpack-plugin').default;
 const { version } = require('../package.json');
 const themeConfig = require('./themeConfig');
+const siteConfig = require('./siteConfig');
 
 const { webpack } = getWebpackConfig;
 
@@ -123,5 +124,5 @@ module.exports = {
     isDev,
     usePreact,
   },
-  root: '/fluent-design/',
+  root: siteConfig.root,
 };

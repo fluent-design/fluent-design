@@ -176,12 +176,17 @@ class Header extends React.Component<HeaderProps, HeaderState> {
       localStorage.setItem('locale', utils.isZhCN(pathname) ? 'en-US' : 'zh-CN');
     }
 
+    const getReplacePathname = () => {
+      let replacePathname = utils.getLocalizedPathname(pathname, !utils.isZhCN(pathname), query)
+        .pathname;
+      if (process.env.NODE_ENV !== 'development') {
+        return `${window.siteConfig.root || '/'}${replacePathname.substr(1)}`;
+      }
+      return replacePathname;
+    };
+
     window.location.href =
-      currentProtocol +
-      currentHref.replace(
-        window.location.pathname,
-        utils.getLocalizedPathname(pathname, !utils.isZhCN(pathname), query).pathname,
-      );
+      currentProtocol + currentHref.replace(window.location.pathname, getReplacePathname());
   };
 
   render() {

@@ -17,6 +17,7 @@ import SiteContext from './SiteContext';
 import enLocale from '../../en-US';
 import cnLocale from '../../zh-CN';
 import * as utils from '../utils';
+import siteConfig from '../../../siteConfig';
 import '../../static/global.less';
 
 if (typeof window !== 'undefined' && navigator.serviceWorker) {
@@ -55,6 +56,8 @@ if (typeof window !== 'undefined') {
     LogRocket.init('kpuw4z/ant-design');
     setupLogRocketReact(LogRocket);
   }
+
+  window.siteConfig = siteConfig;
 }
 
 const RESPONSIVE_MOBILE = 768;
