@@ -127,7 +127,7 @@ class Footer extends React.Component<WrappedComponentProps & { location: any }> 
             Made with <span style={{ color: '#fff' }}>❤</span> by
             {/* eslint-disable-next-line react/jsx-curly-brace-presence */}{' '}
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/zpr1g">
-              <FormattedMessage id="app.footer.auther" />
+              <FormattedMessage id="app.footer.author" />
             </a>
           </>
         }
